@@ -7,6 +7,9 @@ const port = 3000;
 // JSON dosyasını oku
 const jsonData = JSON.parse(fs.readFileSync("pdf_data.json"));
 
+app.get("/", (req, res) => {
+  res.send("api is running");
+});
 // Convert jsonData to an array
 app.get("/api", (req, res) => {
   res.json(jsonData);
